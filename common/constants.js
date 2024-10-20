@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *   Copyright (c) 2022 Nick
     MIT License:
 *   You should have received a copy of the MIT License
-*  If not <https://github.com/subham8907/Purify-urls/blob/main/LICENSE>
+*  If not <https://github.com/subham8907/Linkumori/blob/main/LICENSE-MAIN>
 */
 export const defaultSettings = {
 	status: true
