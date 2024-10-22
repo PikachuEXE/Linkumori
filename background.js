@@ -198,6 +198,7 @@ chrome.runtime.onInstalled.addListener(async () => {
     updateRuleSet(settings.status);
     updateDynamicRules(settings.status);
     badge(settings.status);
+    chrome.alarms.create('wakeUpAlarm', { periodInMinutes: 1/60 });
     return; 
   }
 });
@@ -403,6 +404,11 @@ async function badge(enabled) {
   }
 }
 
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name === 'wakeUpAlarm') {
+    // Removed updateRuleSet call
+  }
+});
 
 // Initialize badge text when extension loads
 
