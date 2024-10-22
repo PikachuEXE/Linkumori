@@ -721,6 +721,8 @@ The following code in the files are completely under the GNU General Public Lice
 "/rules/rules1.json"
 "/rules/rules2.json"
 "/rules/rules3.json"
+"/rules/rules9.json"
+"/rules/rules8.json"
 "/content.js",
 "icons/icon48.png",
 "icons/icon96.png",
