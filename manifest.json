@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Linkumori",
+  "name": "Linkumori (URLs Purifier)",
   "version": "1.0",
   "description": "Clean tracking query parameters from URLs",
   
