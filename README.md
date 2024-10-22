@@ -101,7 +101,7 @@ This project uses the Liberation Serif Regular font, which is licensed under the
 
 ## license
 
-For full license texts, please see the [LICENSE-MAIN](LICENSE-MAIN) file in the project repository.
+For full license texts, please see the [LICENSE](LICENSE) file in the project repository.
 
 ## Acknowledgments
 
