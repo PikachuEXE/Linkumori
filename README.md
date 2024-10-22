@@ -63,8 +63,8 @@ The following files are completely under the GNU General Public License v3:
 - `/content.js`
 - `/Linkumori-Artifact/Artifact.json`
 - `/dynamic-rules/rules.json`
-- `/rules/rules1.json` to `/rules/rules3.json`
-- `/rules/rules8.json` to `/rules/rules9.json`
+- `/rules/original/rules1.json` to `/rules/original/rules3.json`
+- `/rules/original/rules8.json` to `/rules/original/rules9.json`
 - `icons/icon48.png`, `icons/icon96.png`, `icons/icon128.png`
 
 Copyright (c) 2024 Subham Mahesh
