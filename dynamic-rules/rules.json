@@ -393,6 +393,9 @@
   {"id":394,"priority":1,"action":{"type":"redirect","redirect":{"transform":{"queryTransform":{"removeParams":["ch_source"]}}}},"condition":{"resourceTypes":["xmlhttprequest","sub_frame","main_frame"],"requestDomains":["zoominfo.com"]}},
   {"id":395,"priority":1,"action":{"type":"redirect","redirect":{"transform":{"queryTransform":{"removeParams":["email"]}}}},"condition":{"resourceTypes":["xmlhttprequest","sub_frame","main_frame"],"requestDomains":["landevei.no"]}},
   {"id":396,"priority":1,"action":{"type":"redirect","redirect":{"transform":{"queryTransform":{"removeParams":["maltcode"]}}}},"condition":{"resourceTypes":["xmlhttprequest","sub_frame","main_frame"],"requestDomains":["gamestop.com","ubisoft.com"]}},
-  {"id":398,"priority":1,"action":{"type":"redirect","redirect":{"transform":{"queryTransform":{"removeParams":["classType","from"]}}}},"condition":{"resourceTypes":["xmlhttprequest","sub_frame","main_frame"],"requestDomains":["walmart.com"]}}
+  {"id":398,"priority":1,"action":{"type":"redirect","redirect":{"transform":{"queryTransform":{"removeParams":["classType","from"]}}}},"condition":{"resourceTypes":["xmlhttprequest","sub_frame","main_frame"],"requestDomains":["walmart.com"]}},
+  {"id":399,"priority":1,"action":{"type":"redirect","redirect":{"transform":{"queryTransform":{"removeParams":["from"]}}}},"condition":{"resourceTypes":["xmlhttprequest","sub_frame","main_frame"],"requestDomains":["lidea.today"]}},
+  {"id":400,"priority":1,"action":{"type":"redirect","redirect":{"transform":{"queryTransform":{"removeParams":["ref"]}}}},"condition":{"resourceTypes":["xmlhttprequest","sub_frame","main_frame"],"requestDomains":["money.smt.docomo.ne.jp"]}}
+
   ]
   
