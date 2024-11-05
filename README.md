@@ -13,7 +13,6 @@ Linkumori (URLs Purifier) is a powerful browser extension for Chromium-based bro
 - Supports a wide range of websites and URL patterns
 - Blocks hyperlink auditing for increased privacy
 - Uses the History API to update URLs without page reloads
-- Customizable through configuration files
 - Operates seamlessly in the background
 
 ## How It Works
@@ -21,7 +20,7 @@ Linkumori (URLs Purifier) is a powerful browser extension for Chromium-based bro
 1. **Static DNR rules**: Predefined rules that clean common tracking parameters across various websites.
 2. **Dynamic DNR rules**: Allows for more flexible and up-to-date URL cleaning based on the latest tracking methods.
 3. **History API**: For URLs that can't be caught by DNR rules, Linkumori uses the History API to clean the URL without reloading the page.
-4. **Hyperlink Auditing Block**: Prevents websites from tracking your clicks on links that leave their site.(to be added)
+4. **Hyperlink Auditing Block**: Prevents websites from tracking your clicks on links that leave their site.
 
 ## Installation
 
