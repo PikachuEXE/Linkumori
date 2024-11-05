@@ -1,0 +1,35 @@
+name: Build and Release (Manual Trigger)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  manual-build:
+    # Use macos-14 for arm64 architecture: https://github.blog/changelog/2024-01-30-github-actions-introducing-the-new-m1-macos-runner-available-to-open-source/
+    # macos-latest refers to the macos-12 (x86_64) runner image until April–June 2024: https://github.blog/changelog/2024-01-30-github-actions-macos-14-sonoma-is-now-available/ and https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          # Cache the global `yarn cache dir` for faster builds by reusing dependencies.
+          # NOTE: Avoid caching the project-specific node_modules directory to prevent dependency conflicts and ensure proper cache updates. As the documentation to actions/cache states: "it can break across Node versions and won't work with npm ci."
+          cache: "yarn"
+
+      - name: Build Sign Chrome Extension crx file
+        uses: emilymclean/pack-chromium-extension@v1
+        env:
+          EXTENSION_KEY: ${{ secrets.CHROME_SIGNING_KEY }}
+        with:
+          input-folder: .
+          output-file: extension.crx
+
+      - name: Upload crx file
+        uses: actions/upload-artifact@v4
+        with:
+          name: CRX File
+          path: "extension.crx"
+          # Minimum artifact retention is 1 day
+          retention-days: 1
