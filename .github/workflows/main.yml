@@ -1,0 +1,10 @@
+            - name: pack-chromium-extension
+  # You may pin to the exact commit or the version.
+  # uses: emilymclean/pack-chromium-extension@297f6fc8e132e507edd9d98a40e9a7d5f552e514
+  uses: emilymclean/pack-chromium-extension@v1
+  with:
+    # The src folder of the extension
+    input-folder: 
+    # Where the resulting extension file should be written
+    output-file: 
+          
