@@ -1,0 +1,33 @@
+name: Build and Release (Manual Trigger)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  manual-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # pack zip and read manifest, can be reused in the following steps
+      - name: Pack Extension Folder
+        id: packExtensionDir
+        uses: cardinalby/webext-buildtools-pack-extension-dir-action@v1
+        with:
+          extensionDir: '.'
+          zipFilePath: 'build/extension.zip'
+
+      - name: Build Extension crx file
+        uses: cardinalby/webext-buildtools-chrome-crx-action@v2
+        with:
+          # zip file made at the packExtensionDir step
+          zipFilePath: 'build/extension.zip'
+          crxFilePath: 'build/extension.crx'
+          privateKey: ${{ secrets.CHROME_CRX_PRIVATE_KEY }}
+
+      - name: Upload crx file
+        uses: actions/upload-artifact@v4
+        with:
+          name: CRX File
+          path: "build/extension.crx"
+          # Minimum artifact retention is 1 day
+          retention-days: 1
